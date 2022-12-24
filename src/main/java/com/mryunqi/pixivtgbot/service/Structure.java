@@ -81,6 +81,7 @@ public class Structure {
             obj.put("width",width);
             obj.put("height",height);
             obj.put("aiType",aiType);
+            obj.put("page",page);
             obj.put("uploadDate",uploadDate);
             obj.put("tags",tags);
             obj.put("urlS",urlS);

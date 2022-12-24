@@ -3,10 +3,10 @@ server:
 
 spring:
   application:
-    name: PixivTgBot
-  cloud:
-    sentinel:
-      eager: true
+    name: PixivPicAPI
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 http:
   maxTotal: 100
   #并发数
@@ -21,3 +21,17 @@ http:
   staleConnectionCheckEnabled: true
   #可用空闲连接过期时间,重用空闲连接时会先检查是否空闲时间超过这个时间，如果超过，释放socket重新建立
   validateAfterInactivity: 3000000
+
+# swagger配置
+swagger:
+  enabled: true
+  title: '夜空-Pixiv的接口文档'
+  base:
+    package: com.mryunqi.pixivtgbot.controller
+  description: 'Pixiv的接口文档'
+  url: 'https://www.mryunqi.com'
+  contact:
+    name: 'Mryunqi(夜空)'
+    email: '434658198@qq.com'
+    url: 'https://www.mryunqi.com'
+  version: v1.0.0
